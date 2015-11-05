@@ -1,4 +1,7 @@
-# SG
+## Rozpoznawanie mówcy oraz określanie jego wieku - zastosowanie w systemach serwujących reklamy
+
 Projekt z SG
 
-NASZ TEMAT: Rozpoznawanie mówcy oraz określanie jego wieku - zastosowanie w systemach serwujących reklamy
+Struktura projektu za 
+- https://nicercode.github.io/blog/2013-04-05-projects/
+- https://nicercode.github.io/blog/2013-05-17-organising-my-project/
