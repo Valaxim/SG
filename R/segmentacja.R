@@ -5,11 +5,10 @@
 # parametr overlap zawiera czesc poprzedniego okna, ktore nachodzi na kolejne okno
 # W celu minimalizacji ekeftow brzegowych zastosowano okno Hamminga
 
-setwd("C:/Users/Michał/Documents/sem7/SG/RStudio/segmantacja")
 library(tuneR)
 library(signal)
 
-sound <- readWave("sounds/kaszanka1.wav") # Odczyt pliku
+sound <- readWave("sound.wav") # Odczyt pliku
 # output <- sound # Zmienna do zapisu pliku
 
 len <- 0.02 # Dlugosc okna czasowego w sekundach
