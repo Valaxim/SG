@@ -8,12 +8,12 @@
 library(tuneR)
 library(signal)
 
-segmentacja <- function(sound) {
+segmentacja <- function(sound, len, overlap) {
   # sound <- readWave("data/dzien_dobry_11.wav") # Odczyt pliku
   # output <- sound # Zmienna do zapisu pliku
   
-  len <- 0.02 # Dlugosc okna czasowego w sekundach
-  overlap <- 0.5 # Czesc poprzedniej ramki nachadzacej na kolejna (od 0 do 0.99)
+  #len <- 0.02 # Dlugosc okna czasowego w sekundach
+  #overlap <- 0.5 # Czesc poprzedniej ramki nachadzacej na kolejna (od 0 do 0.99)
   
   n <- len*sound@samp.rate # Dlugosc okna czasowego w ilosci probek
   i <- floor(seq(0, length(sound@left) - n, n*(1 - overlap)) + 1) # Indeksy poczatkow kolejnych ramek
