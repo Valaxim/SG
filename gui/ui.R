@@ -13,13 +13,13 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Przykładowe próbki głosu")),
-                    p("Uruchom analizę głosu znanych osób. Próbki te pozwalają przeprowadzić analize poprawności algorytmów."),
                     div(
                         style = "text-align: center;",
-                        actionButton("action", label = "Katarzyna Hejke-Gójka", width='20%'),    
-                        actionButton("action", label = "Cezary Gmyz", width='20%'),
-                        actionButton("action", label = "Piotr Szumlewicz", width='20%'),
-                        actionButton("action", label = "Uruchom testy", width='20%')
+                        actionButton("action_example_1", label = "Katarzyna Hejke-Gójka", width='20%'),    
+                        actionButton("action_example_2", label = "Cezary Gmyz", width='20%'),
+                        actionButton("action_example_3", label = "Piotr Szumlewicz", width='20%'),
+                        actionButton("action_tests", label = "Uruchom testy", width='20%'),
+                        textOutput("debug_text")
                     )
                 )
             ),
@@ -98,9 +98,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Opis czegoś innego")),
                     p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -110,9 +110,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Opis jeszcze czegoś zupełnie innego")),
                     p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -122,14 +122,14 @@ shinyUI(
             )
         ),
         tabPanel(
-            "Orpacowanie teoretyczne",
+            "Opracowanie teoretyczne",
             HTML("<div id=\"article_list\"></div>"),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 h4("Wyniki pracy grupy „Research”. Wybrane artykuły z krótkim streszczeniem."),
                 br(),
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Spis treści")),
                     HTML("<a href=\"#article_1\">Artykuł 1</a>"),
                     HTML("<a href=\"#article_2\">Artykuł 2</a>"),
@@ -145,10 +145,10 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 br(),
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł I")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_1\"></div>"),
@@ -165,9 +165,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł II")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_2\"></div>"),
@@ -182,9 +182,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł III")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_3\"></div>"),
@@ -199,9 +199,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł IV")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_4\"></div>"),
@@ -227,9 +227,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł V")),
                     HTML("<div id=\"article_5\"></div>"),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
@@ -251,9 +251,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł VI")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_6\"></div>"),
@@ -268,9 +268,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł VII")),
                     HTML("<div id=\"article_7\"></div>"),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
@@ -287,9 +287,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł VIII")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_8\"></div>"),
@@ -306,9 +306,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł IX")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_9\"></div>"),
@@ -321,9 +321,9 @@ shinyUI(
             ),
             br(),
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
+                    class = "inner",
                     h4(strong("Artykuł X")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_10\"></div>"),
@@ -340,10 +340,10 @@ shinyUI(
         tabPanel(
             "Autorzy",
             div(
-                style = "text-align: center; font-family: monospace; color: #888;",
+                class = "outer",
                 div(
-                    style = "text-align: justify; background-color: #f5f5f5; width: 75%; border: 1px solid #e3e3e3; border-radius: 10px;  display: inline-block; padding: 10px;",
-                    p(strong("Tytuł: "), "#uzupełnić tytuł#."),
+                    class = "inner",
+                    p(strong("Tytuł: "), "Rozpoznawanie płci i wieku mówcy."),
                     p(strong("Kierunek: "), "Automatyka i Robotyka"),
                     p(strong("Przedmiot: "), "Systemy głosowe"),
                     p(strong("Kierunek: "), "Automatyka i Robotyka"),
@@ -352,11 +352,10 @@ shinyUI(
                       Krzysztof Mazur, Jakub Hojoł, Mateusz Łubiarz, Adam Stangret."),
                     p(strong("Programiści: "), "Michał Boroń, Jan Stelmasiak,  Karol Zborowski, Wojciech Tobiś, Wojciech Gumuła, Rafał Prusak, Mateusz Małecki."),
                     p(strong("Dokumentacja: "), "Tomasz Kańka."),
-                    p(strong("Opis programu: "), " # wpisać co robi ten zjebany program# Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+                    p(strong("Opis programu:")," Naszym zadaniem było rozpoznawanie płci i wieku mówcy na podstawie badanych próbek. Do realizacji tego programu zastosowaliśmy 
+                    algorytm MFCC (Mel-frequency cepstral coefficients), na który składają się następujące kroki:
+                    podział na klatki szybka transformata Fouriera (FFT) obłożenie wyniku wartością bezwzględną  filtr melowy dyskretna transformata cosinusowa
+                    Cały projekt został wykonany w języku \"R\" wraz z nakładką graficzną \"Shiny\".")
                 )
             )
         )
