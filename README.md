@@ -9,6 +9,7 @@ Struktura projektu za
 
 TODO:  
 - [GUI] dogadać ustawienia i dodać widgety do wprowadzenia ustawień
-- [GUI] napisać funkcję uruchamiającą testy i podpiąć ja pod button
+- [GUI] napisać funkcję uruchamiającą testy i podpiąć ją pod button
 - [GUI] poprawa koloru linków w opisie teoretycznym
 - [GUI] odtwrzanie dźwięku po jego wczytaniu
+- [GUI] przerobienie obrazka dokumentacji na htmlową tabelkę
