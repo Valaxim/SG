@@ -19,7 +19,8 @@ shinyUI(
                         actionButton("action_example_2", label = "Cezary Gmyz", width='20%'),
                         actionButton("action_example_3", label = "Piotr Szumlewicz", width='20%'),
                         actionButton("action_tests", label = "Uruchom testy", width='20%'),
-                        textOutput("debug_text")
+                        textOutput("debug_text"),
+                        textOutput("debug_text2")
                     )
                 )
             ),
@@ -30,8 +31,17 @@ shinyUI(
                     class = "inner",
                     h4(strong("Wczytaj własny plik")),
                     div(
-                        style = "text-align: center;",
-                        fileInput("file", label = "")
+                        div(
+                            class = "cointainer",
+                            div(
+                                class = "left",
+                                fileInput("inputFile", label = "")
+                            ),
+                            div(
+                                class = "right",
+                                actionButton("action_file", label = "Przetestuj plik")
+                            )   
+                        )                         
                     )
                 )
             ),
@@ -44,18 +54,33 @@ shinyUI(
                     div(
                         style = "text-align: center;",
                         fluidRow(
-                            column(3, 
-                                "",
-                                textOutput("gender_output")
+                            column(3,
+                                div(
+                                    class = "output_field",   
+                                    p("Płeć:"),
+                                    textOutput("gender_output")
+                                )
                             ),
                             column(3, 
-                                textOutput("gender_probability_output")
+                                div(
+                                    class = "output_field",
+                                    p("Prawdopodobieństwo płci"),
+                                    textOutput("gender_probability_output")    
+                                )   
                             ),
                             column(3,
-                                textOutput("age_output")    
+                                div(
+                                    class = "output_field",
+                                    p("Wiek"),
+                                    textOutput("age_output")    
+                                )
                             ),
                             column(3,
-                                textOutput("age_probability_output")    
+                                div(
+                                    class = "output_field",
+                                    p("Prawdopodobieństwo wieku"),
+                                    textOutput("age_probability_output") 
+                                )
                             )
                         )
                     )
@@ -89,37 +114,11 @@ shinyUI(
                 class = "outer",
                 div(
                     class = "inner",
-                    h4(strong("Opis czegoś tam")),
-                    p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+                    h4(strong("Dokumentacja programu")),
+                    HTML("<img src=\"dokumentacja.jpg\">")
                 )
             ),
-            br(),
-            div(
-                class = "outer",
-                div(
-                    class = "inner",
-                    h4(strong("Opis czegoś innego")),
-                    p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
-                )
-            ),
-            br(),
-            div(
-                class = "outer",
-                div(
-                    class = "inner",
-                    h4(strong("Opis jeszcze czegoś zupełnie innego")),
-                    p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
-                )
-            )
+            br()
         ),
         tabPanel(
             "Opracowanie teoretyczne",
@@ -144,6 +143,7 @@ shinyUI(
                 )
             ),
             br(),
+            HTML("<div id=\"article_1\"></div>"),
             div(
                 class = "outer",
                 br(),
@@ -151,7 +151,6 @@ shinyUI(
                     class = "inner",
                     h4(strong("Artykuł I")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
-                    HTML("<div id=\"article_1\"></div>"),
                     em("M. Hasan Bahari, M. McLaren, H. Van hamme, D. Van Leeuwen Age Estimation from Telephone Speech using i-vector: 
                       Center for processing speech and images, KU Leuven, Belgium; Center for Language and Speech Technology,
                       Radboud University Nijmegen, The Netherlands"),
@@ -163,6 +162,7 @@ shinyUI(
                       Standard in Technology (NIST).")
                 )
             ),
+            HTML("<div id=\"article_2\"></div>"),
             br(),
             div(
                 class = "outer",
@@ -170,7 +170,6 @@ shinyUI(
                     class = "inner",
                     h4(strong("Artykuł II")),
                     HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
-                    HTML("<div id=\"article_2\"></div>"),
                     em("LM. Hasan Bahari, H. Van hamme. Speaker Age Estimation Using Hidden Markov Model Weight Supervectors :Center for 
                       Processing Speech and Images (PSI), Department of Electrical Engineering (ESAT),  KU Leuven, Belgium"),
                     br(), br(),
