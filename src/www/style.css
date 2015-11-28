@@ -4,7 +4,8 @@ body {
 }	
 
 a {
-	color: #000066; 
+	color: #D8D8D8; 
+	font-style: italic;
 }
 
 a:hover {
