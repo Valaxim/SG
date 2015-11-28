@@ -143,16 +143,16 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Spis treści")),
-                    HTML("<a href=\"#article_1\">Artykuł 1</a>"),
-                    HTML("<a href=\"#article_2\">Artykuł 2</a>"),
-                    HTML("<a href=\"#article_3\">Artykuł 3</a>"),
-                    HTML("<a href=\"#article_4\">Artykuł 4</a>"),
-                    HTML("<a href=\"#article_5\">Artykuł 5</a>"),
-                    HTML("<a href=\"#article_6\">Artykuł 6</a>"),
-                    HTML("<a href=\"#article_7\">Artykuł 7</a>"),
-                    HTML("<a href=\"#article_8\">Artykuł 8</a>"),
-                    HTML("<a href=\"#article_9\">Artykuł 9</a>"),
-                    HTML("<a href=\"#article_10\">Artykuł 10</a>")
+                    HTML("<a href=\"#article_1\">Artykuł I</a>"),
+                    HTML("<a href=\"#article_2\">Artykuł II</a>"),
+                    HTML("<a href=\"#article_3\">Artykuł III</a>"),
+                    HTML("<a href=\"#article_4\">Artykuł IV</a>"),
+                    HTML("<a href=\"#article_5\">Artykuł V</a>"),
+                    HTML("<a href=\"#article_6\">Artykuł VI</a>"),
+                    HTML("<a href=\"#article_7\">Artykuł VII</a>"),
+                    HTML("<a href=\"#article_8\">Artykuł VIII</a>"),
+                    HTML("<a href=\"#article_9\">Artykuł IX</a>"),
+                    HTML("<a href=\"#article_10\">Artykuł X</a>")
                 )
             ),
             br(),
@@ -162,8 +162,8 @@ shinyUI(
                 br(),
                 div(
                     class = "inner",
-                    h4(strong("Artykuł I")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
+                    h4(strong("Artykuł I")), 
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("M. Hasan Bahari, M. McLaren, H. Van hamme, D. Van Leeuwen Age Estimation from Telephone Speech using i-vector: 
                       Center for processing speech and images, KU Leuven, Belgium; Center for Language and Speech Technology,
                       Radboud University Nijmegen, The Netherlands"),
@@ -182,7 +182,7 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Artykuł II")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("LM. Hasan Bahari, H. Van hamme. Speaker Age Estimation Using Hidden Markov Model Weight Supervectors :Center for 
                       Processing Speech and Images (PSI), Department of Electrical Engineering (ESAT),  KU Leuven, Belgium"),
                     br(), br(),
@@ -197,9 +197,9 @@ shinyUI(
                 class = "outer",
                 div(
                     class = "inner",
-                    h4(strong("Artykuł III")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_3\"></div>"),
+                    h4(strong("Artykuł III")),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("LE. Yucesoy, V.V. Nabiyev. Gender identification of a speaker using MFCC and GMM: Electrical and Electronics Engineering (ELECO), 
                       2013 8th International Conference"),
                     br(), br(),
@@ -215,8 +215,8 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Artykuł IV")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_4\"></div>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("T. Kinnunen, T. Kilpeläinen, P. Fränti. Comparison Of Clustering Algorithms In Speaker Identification: Department Of Computer Science, 
                        University Of Joensuu, Finland."),
                     br(), br(),
@@ -244,7 +244,7 @@ shinyUI(
                     class = "inner",
                     h4(strong("Artykuł V")),
                     HTML("<div id=\"article_5\"></div>"),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("S. J Chaudhari, R. M Kagalkar. A Methodology for Efficient Gender Dependent Speaker Age and Emotion Identification System: 
                        International Journal of Advanced Research in Computer and Communication Engineering (IJARCCE) ISSN 2319-5940, Volume 4, Issue 7, July 2015."),
                     br(), br(),
@@ -267,8 +267,8 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Artykuł VI")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_6\"></div>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("A. Mousa. MareText Independent Speaker Identification  based on K-mean Algorithm: International 
                        Journal on Electrical Engineering and Informatics  -  Volume 3, Number 1, 2011."),
                     br(), br(),
@@ -285,7 +285,7 @@ shinyUI(
                     class = "inner",
                     h4(strong("Artykuł VII")),
                     HTML("<div id=\"article_7\"></div>"),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em(" Z. Gomółka. Identyfikacja mówcy z wykorzystaniem współczynników predykcji liniowej: Instytut Techniki, Uniwersytet Rzeszowski, Rzeszów."),
                     br(), br(),
                     p("W dokumencie przedstawiono metodę klasyfikacji minimalno-odległościowej do wyznaczenia prawdopodobnego mówcy. 
@@ -303,8 +303,8 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Artykuł VIII")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_8\"></div>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("P. Żelasko, A. Trawińska, B. Ziółko, M. Czyżyk, J. Stanisławek, E. Ślusarz. Zastosowanie algorytmu DTW jako narzędzia identyfikacji mówcy : 
                        Problemy Kryminalistyki 280(2) 2013"),
                     br(), br(),
@@ -322,8 +322,8 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Artykuł IX")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_9\"></div>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("A. Wiśniewski. System Rozpoznawania Mówców: Uniwersytet Warmińsko-Mazurski, Olsztyn; Wojskowa Akademia Techniczna, Warszawa."),
                     br(), br(),
                     p("Praca na temat HMM - zastosowania, sposoby realizacji. Idea HMM polega na traktowaniu sygnału mowy jako sekwencji wektorów obserwacji które z jednej strony 
@@ -337,8 +337,8 @@ shinyUI(
                 div(
                     class = "inner",
                     h4(strong("Artykuł X")),
-                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"),
                     HTML("<div id=\"article_10\"></div>"),
+                    HTML("<a href=\"#article_list\">Powrót do spisu treści</a>"), br(),
                     em("A. Solomonoff, W.M. Campbell, I. Boardman. Advances In Channel Compensation For SVM Speaker Recognition :Acoustics, Speech, and Signal Processing, 2005. 
                        Proceedings. (ICASSP '05). IEEE International Conference on  (Volume:1 )"),
                     br(), br(),
