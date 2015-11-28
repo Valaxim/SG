@@ -1,3 +1,4 @@
+source("szukaj_plec.R")
 test_szumi<- function(){
     
     # tutaj musi być wywołanie funkcji dla Piotra Szumlewicza

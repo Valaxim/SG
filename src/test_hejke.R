@@ -1,3 +1,4 @@
+source("szukaj_plec.R")
 test_hejke<- function(){
     
     # tutaj musi być wywołanie funkcji dla Katarzyny Hejke-Gójki

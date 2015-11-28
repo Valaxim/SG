@@ -1,3 +1,4 @@
+source("szukaj_plec.R")
 test_file<- function(file){
   r <- szukaj_plec(file$datapath)
   age <- r$wiek
