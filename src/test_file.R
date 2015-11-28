@@ -1,7 +1,8 @@
-test_file<- function(file){
-  r <- szukaj_plec(file$datapath)
-  age <- r$wiek
-  gender <- r$plec
+test_file<- function(file, options){
+
+    r <- szukaj_plec(file$datapath)
+    age <- r$wiek
+    gender <- r$plec
 	name <- file$name
 	age_probal <- "wyliczone prawdopodobieństwo wieku"
 	gender_probal <- "wyliczone prawdopodobieństwo płci"

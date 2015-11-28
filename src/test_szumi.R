@@ -1,5 +1,4 @@
-test_szumi<- function(){
-    
+test_szumi<- function(options){
     # tutaj musi być wywołanie funkcji dla Piotra Szumlewicza
     r <- szukaj_plec("../data/szumi.wav")
     age <- r$wiek

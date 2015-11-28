@@ -1,7 +1,6 @@
 source("test1.R")
 
-
-test_all<- function(){
+test_all<- function(options){
     
     # tutaj musi być wywołanie funkcji dla Cezarego Gmyza 
     r <- test1()
@@ -9,8 +8,8 @@ test_all<- function(){
 	name <- "Testowanie wszystkiego"
 	age <- paste("Łącznie testów: ", r$testy)
 	age_probal <- paste("Łącznie płeć poprawna: ", r$plec_poprawnie)
-	gender <- paste("Wiek błąd sredni ", r$sredni_blad_wiek)
-	gender_probal <- ""
+	gender <- "Podsumumowanie testów"
+	gender_probal <- paste("Wiek błąd sredni ", r$sredni_blad_wiek)
 	path_to_file <- ""
 
 	result = list("name" = name, "age" = age, "age_probal" = age_probal, "gender" = gender, "gender_probal" = gender_probal, "path" = path_to_file)

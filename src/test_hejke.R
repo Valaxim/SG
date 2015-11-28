@@ -1,5 +1,5 @@
-test_hejke<- function(){
-    
+test_hejke<- function(options){
+
     # tutaj musi być wywołanie funkcji dla Katarzyny Hejke-Gójki
     r <- szukaj_plec("../data/heyke.wav")
     age <- r$wiek

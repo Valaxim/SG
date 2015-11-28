@@ -1,11 +1,11 @@
 source("szukaj_plec.R")
  
-test_gmyz<- function(){
+test_gmyz<- function(options){
     
     # tutaj musi być wywołanie funkcji dla Cezarego Gmyza 
-  r <- szukaj_plec("../data/gmyz.wav")
-  age <- r$wiek
-  gender <- r$plec
+    r <- szukaj_plec("../data/gmyz.wav")
+    age <- r$wiek
+    gender <- r$plec
   
 	name <- "Cezary Gmyz"
 	age_probal <- "0.8"
