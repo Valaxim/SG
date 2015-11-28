@@ -34,10 +34,11 @@ shinyServer(function(input, output) {
                                 "wykladnik_liftera" = input$num_lifter,
                                 "hkt" = input$hkt_checkbox,
                                 "czyPowerSpectrum" = input$PowerSpectrum_checkbox,
-                                "wstepna_filtracja" = input$filtr_slider,
+                                "wstepna_filtracja" = 0.97,
                                 "dodanieOffsetu" = input$offset_checkbox,
                                 "liczbaPasm" = input$num_liczbaPasm,
                                 "szerokoscPasm" = input$num_szerokoscPasma)
+            print("asdasdas")
             r <- suppressWarnings(test_hejke(alg_options))
             name <- r$name
             age <- r$age

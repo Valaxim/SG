@@ -15,7 +15,7 @@ initDb <- function(
   szerokoscPasm = 1 #szerokosc pasm
 ) {
 filename_0 <-"../baza/k_21.wav"
-par_0 <- wave2mfcc(filename_0, len = len, overlap = overlap, numofMFCC = numofMFCC, dolna_czest = dolna_czest, gorna_czest = gorna_czest, wykladnik_liftera = wykladnik_liftera, hkt = hkt, czyPowerSpectrum = czyPowerSpectrum, wstepna_filtracja = wstepna_filtracja, dodanieOffsetu = dodanieOffsetu, liczbaPasm = liczbaPasm, szerokoscPasm = szerokoscPasm)
+par_0 <-wave2mfcc(filename_0, len, overlap, numofMFCC, dolna_czest, gorna_czest, wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja, dodanieOffsetu, liczbaPasm, szerokoscPasm)
 k_21 <- colMeans(par_0)
 filename_3 <-"../baza/k_33_2.wav"
 par_3 <- wave2mfcc(filename_3, len, overlap, numofMFCC, dolna_czest, gorna_czest, wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja, dodanieOffsetu, liczbaPasm, szerokoscPasm)

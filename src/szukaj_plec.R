@@ -3,7 +3,7 @@ source('wave2mfcc.R')
 #load('baza.RData')
 source("wave2mfcc.R")
 source("initDb.R")
-szukaj_plec <- function(filename,
+szukaj_plec <- function(filename, db, 
                         len = 0.02,
                         overlap = 0.05, # Odstep miedzy kolejnymi oknami w sekundach
                         numofMFCC = 25, #ilosc wspolczynnikow wyliczanych dla kazdego okna czasowego
@@ -17,15 +17,13 @@ szukaj_plec <- function(filename,
                         liczbaPasm = 40, #liczba pasm
                         szerokoscPasm = 1 #szerokosc pasm
 ) {
-  r <- initDb(len, overlap, numofMFCC, dolna_czest, gorna_czest,
-              wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja,
-              dodanieOffsetu, liczbaPasm, szerokoscPasm)
-  dane <- r$dane
-  punkty <- r$punkty
-  wiek <- r$wiek
-  wiek_kobiet <- r$wiekK
-  wiem_mezczyzn <- r$wiekM
-  plec <- r$plec
+  
+  dane <- db$dane
+  punkty <- db$punkty
+  wiek <- db$wiek
+  wiek_kobiet <- db$wiekK
+  wiem_mezczyzn <- db$wiekM
+  plec <- db$plec
   parameters = wave2mfcc(filename, len, overlap, numofMFCC, dolna_czest, gorna_czest,
                          wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja,
                          dodanieOffsetu, liczbaPasm, szerokoscPasm)
