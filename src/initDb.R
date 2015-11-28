@@ -1,20 +1,5 @@
 source("wave2mfcc.R")
 
-# args <- commandArgs(trailingOnly = TRUE)
-# print(args)
-# len <- as.numeric(args[1])
-# overlap <- as.numeric(args[2]) # Odstep miedzy kolejnymi oknami w sekundach
-# numofMFCC <- as.numeric(args[3]) #ilosc wspolczynnikow wyliczanych dla kazdego okna czasowego
-# dolna_czest <- as.numeric(args[4]) #dolna czestotliwosc dla filtow mel
-# gorna_czest <- as.numeric(args[5]) #gorna czestotliwosc dla filtrow mel
-# wykladnik_liftera <- as.numeric(args[6]) #wykladnik liftera(cokolwiek to jest)
-# hkt <- as.logical(args[7]) #czy uzywamy hkt lifter
-# czyPowerSpectrum <- as.logical(args[8]) #czy uzywamy powerspectrum czy klasycznego pierwiastka
-# wstepna_filtracja <- as.numeric(args[9]) #wspolczynnik wstepnej filtracji
-# dodanieOffsetu <- as.logical(args[10]) #okresla czy dodajemy offset
-# liczbaPasm <- as.numeric(args[11]) #liczba pasm
-# szerokoscPasm <- as.numeric(args[12]) #szerokosc pasm
-
 initDb <- function(
   len = 0.02,
   overlap = 0.05, # Odstep miedzy kolejnymi oknami w sekundach
