@@ -1,4 +1,4 @@
-library(seewave);
+#library(seewave);
 source("fintracja.R")
 
 wave2mfcc <- function(
