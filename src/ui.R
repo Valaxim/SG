@@ -88,25 +88,38 @@ shinyUI(
             ),
             br()
         ),
-        navbarMenu("Ustawienia",
-            tabPanel(
-                "Opcje algorytmu 1",
-                div(
-                    class = "outer",
-                    div(
-                        class = "inner",
-                        h4(strong("#uzupełnić nazwę algorytmu#")),
-                        p("Może jakiś opis(?)"),
-                            div(
-                                style = "padding-left: 5%;",
-                                sliderInput("len", label = "Długość okienka czasowego[s]", min = 0.01, max = 0.05, value = 0.02),
-                                sliderInput("overlap", label = "Część poprzedniej ramki, która nachodzi na kolejną", min = 0, max = 0.6, value = 0.3)
-                            )
-                    )
-                )
-            ),
-            tabPanel("Opcje algorytmu 2"),
-            tabPanel("Opcje algorytmu 3")
+        tabPanel("Ustawienia",
+                 div(
+                     class = "outer",
+                     div(
+                         class = "inner",
+                         h4(strong("Ustawienia programu: ")),
+                         fluidRow(
+                             column(4,
+                                    h3("#Dopisać tytuł#"),
+                                    checkboxInput("PowerSpectrum_checkbox", label = "Użyj PowerSpectrum", value = TRUE),
+                                    checkboxInput("hkt_checkbox", label = "Użyj hkt", value = FALSE),
+                                    checkboxInput("offset_checkbox", label = "Dodanie offsetu", value = FALSE)
+                            ),
+
+                             column(4, 
+                                    h3("#Dopisać tytuł2#"),
+                                    sliderInput("len_slider", label = "len", min = 0, max = 0.02, value = 1),
+                                    sliderInput("overlap_slider", label = "overlap", min = 0, max = 0.05, value = 1),
+                                    sliderInput("filtr_slider", label = "wstępna filtracja", min = 0, max = 0.97, value = 1),
+                                    sliderInput("freq_slider", label = "Dolna i górna częstotliwość", min = 0, max = 10000, value = c(1000, 8000))
+                                    
+                            ),
+                            column(4, 
+                                   h3("#Dopisać tytuł3#"),
+                                   numericInput("num_MFCC", label = "numofMFCC", value = 25),
+                                   numericInput("num_lifter", label = "wykladnik_liftera", value = 0),
+                                   numericInput("num_liczbaPasm", label = "liczbaPasm", value = 40),  
+                                   numericInput("num_szerokoscPasma", label = "szerokoscPasma", value = 1)  
+                            )   
+                         )
+                     )
+                 )
         ),
         tabPanel(
             "Dokumentacja",
