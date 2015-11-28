@@ -32,7 +32,7 @@ szukaj_plec <- function(filename, db = initDb(),
   wynik_plec2 <- odleglosci;
   wynik_wiek <- odleglosci;
   for(i in 1:num){
-    odleglosci[i] <- 1/(((punkt-punkty[i])^2));
+    odleglosci[i] <- 1/(sqrt(((punkt-punkty[i])^2)));
   }
   pl <- sum(plec*odleglosci)/sum(odleglosci)
   if(pl>=0.5) {

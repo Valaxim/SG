@@ -44,6 +44,6 @@ wave2mfcc <- function(
               modelorder = NULL,
               spec_out = FALSE,
               frames_in_rows = TRUE)
-  
+  m1 <- deltas(m1)
   return(m1) 
 }
