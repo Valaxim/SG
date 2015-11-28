@@ -1,4 +1,4 @@
-source('../wave2mfcc.R')
+source('wave2mfcc.R')
 load('baza.RData')
 
 source("wave2mfcc.R")
@@ -14,8 +14,12 @@ szukaj_plec <- function(filename) {
   for(i in 1:num){
     odleglosci[i] <- 1/(((punkt-punkty[i])^2));
   }
-  if(sum(plec*odleglosci)/sum(odleglosci)>=0.5){
-    wynik_plec <- "mezczyzna";
+  pl <- sum(plec*odleglosci)/sum(odleglosci)
+  if(pl > 1) {
+    wynik_plec <- "error"
+  }
+  else if(pl>=0.5) {
+    wynik_plec <- "mezczyzna"
   }
   else{
     wynik_plec <- "kobieta"

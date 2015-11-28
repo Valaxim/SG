@@ -1,7 +1,7 @@
 source("szukaj_plec.R")
 
 test1 <- function(verbose = FALSE) {
-  files = list.files(path = "baza", pattern = "*.wav")
+  files = list.files(path = "../baza", pattern = "*.wav")
   
   lacznie_plec_poprawna <- 0
   wiek_blad <- 0
@@ -18,7 +18,7 @@ test1 <- function(verbose = FALSE) {
       wiek_poprawny <- strtoi(substr(f, 3, 3))
     else
       wiek_poprawny <- strtoi(substr(f, 3, 4))
-    wynik <- try(szukaj_plec(paste("baza", f, sep = "/")), silent = TRUE)
+    wynik <- try(szukaj_plec(paste("../baza", f, sep = "/")), silent = TRUE)
     if(inherits(wynik, "try-error"))
     {
       if (verbose)
