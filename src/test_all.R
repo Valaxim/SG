@@ -1,4 +1,4 @@
-source("../test1.R")
+source("test1.R")
 
 
 test_all<- function(){
@@ -7,9 +7,9 @@ test_all<- function(){
     r <- test1()
     
 	name <- "Testowanie wszystkiego"
-	age <- "asds"#paste("Łącznie testów: ", r$testy)
-	age_probal <- #paste("łącznie płeć poprawna: ", r$plec_poprawnie)
-	gender <- #paste("Wiek blad sredni", r$sredni_blad_wiek)
+	age <- paste("Łącznie testów: ", r$testy)
+	age_probal <- paste("Łącznie płeć poprawna: ", r$plec_poprawnie)
+	gender <- paste("Wiek błąd sredni ", r$sredni_blad_wiek)
 	gender_probal <- ""
 	path_to_file <- ""
 

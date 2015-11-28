@@ -1,4 +1,4 @@
-source('../wave2mfcc.R')
+source('wave2mfcc.R')
 load('baza.RData')
 
 source("wave2mfcc.R")
