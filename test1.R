@@ -18,7 +18,7 @@ test1 <- function(verbose = FALSE) {
       wiek_poprawny <- strtoi(substr(f, 3, 3))
     else
       wiek_poprawny <- strtoi(substr(f, 3, 4))
-    wynik <- try(szukaj_plec(f), silent = TRUE)
+    wynik <- try(szukaj_plec(paste("baza", f, sep = "/")), silent = TRUE)
     if(inherits(wynik, "try-error"))
     {
       if (verbose)
