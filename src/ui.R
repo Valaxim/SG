@@ -10,6 +10,7 @@ shinyUI(
             ),
             div(
                 class = "outer",
+                h4("#Dopisać mądry tekst, np. Adam Giża mi ubliża.#"),
                 div(
                     class = "inner",
                     h4(strong("Przykładowe próbki głosu")),
@@ -91,6 +92,7 @@ shinyUI(
         tabPanel("Ustawienia",
                  div(
                      class = "outer",
+                     h4("#Mądry tekst#"),
                      div(
                          class = "inner",
                          h4(strong("Ustawienia programu: ")),
@@ -125,6 +127,7 @@ shinyUI(
             "Dokumentacja",
             div(
                 class = "outer",
+                h4("#Dopisać mądry tekst.#"),
                 div(
                     class = "inner",
                     h4(strong("Dokumentacja programu")),
@@ -353,6 +356,7 @@ shinyUI(
             "Autorzy",
             div(
                 class = "outer",
+                h4("Przydział osób do poszczególnych zadań."),
                 div(
                     class = "inner",
                     p(strong("Tytuł: "), "Rozpoznawanie płci i wieku mówcy."),
