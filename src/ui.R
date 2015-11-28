@@ -10,7 +10,7 @@ shinyUI(
             ),
             div(
                 class = "outer",
-                h4("#Dopisać mądry tekst, np. Adam Giża mi ubliża.#"),
+                h4("Kto chce rządzić ludźmi, nie powinien ich gnać przed sobą, lecz sprawić, by podążali za nim."),
                 div(
                     class = "inner",
                     h4(strong("Przykładowe próbki głosu")),
@@ -66,7 +66,7 @@ shinyUI(
                                 div(
                                     class = "output_field",
                                     # p("Prawdopodobieństwo płci"),
-                                    textOutput("gender_probability_output")    
+                                    textOutput("gender_probability_output")
                                 )   
                             ),
                             column(3,
@@ -92,32 +92,32 @@ shinyUI(
         tabPanel("Ustawienia",
                  div(
                      class = "outer",
-                     h4("#Mądry tekst#"),
+                     h4("Każda chwila, która mogłaby być wykorzystana lepiej, jest stracona."),
                      div(
                          class = "inner",
                          h4(strong("Ustawienia programu: ")),
                          fluidRow(
                              column(4,
-                                    h3("#Dopisać tytuł#"),
+                                    h3("Obelgi – to argumenty tych, którzy nie mają argumentów."),
                                     checkboxInput("PowerSpectrum_checkbox", label = "Użyj PowerSpectrum", value = TRUE),
-                                    checkboxInput("hkt_checkbox", label = "Użyj hkt", value = FALSE),
+                                    checkboxInput("hkt_checkbox", label = "Użyj HKT", value = FALSE),
                                     checkboxInput("offset_checkbox", label = "Dodanie offsetu", value = FALSE)
                             ),
 
                              column(4, 
-                                    h3("#Dopisać tytuł2#"),
-                                    sliderInput("len_slider", label = "len", min = 0, max = 0.02, value = 1),
-                                    sliderInput("overlap_slider", label = "overlap", min = 0, max = 0.05, value = 1),
-                                    sliderInput("filtr_slider", label = "wstępna filtracja", min = 0, max = 0.97, value = 1),
-                                    sliderInput("freq_slider", label = "Dolna i górna częstotliwość", min = 0, max = 10000, value = c(1000, 8000))
+                                    h3("Cierpliwość jest gorzka, ale jej owoce są słodkie."),
+                                    sliderInput("len_slider", label = "Długość okien", min = 0, max = 0.10, value = 0.02),
+                                    sliderInput("overlap_slider", label = "Overlapping okien", min = 0, max = 0.10, value = 0.05),
+                                    sliderInput("filtr_slider", label = "Współczynnik wstępnej filtracji", min = 0, max = 1, value = 0.97),
+                                    sliderInput("freq_slider", label = "Dolna i górna częstotliwość filtracji", min = 0, max = 10000, value = c(100, 5000))
                                     
                             ),
                             column(4, 
-                                   h3("#Dopisać tytuł3#"),
-                                   numericInput("num_MFCC", label = "numofMFCC", value = 25),
-                                   numericInput("num_lifter", label = "wykladnik_liftera", value = 0),
-                                   numericInput("num_liczbaPasm", label = "liczbaPasm", value = 40),  
-                                   numericInput("num_szerokoscPasma", label = "szerokoscPasma", value = 1)  
+                                   h3("To, co zdobyliśmy z największym trudem, najbardziej kochamy."),
+                                   numericInput("num_MFCC", label = "Liczba wyznaczanych współczynników", value = 25),
+                                   numericInput("num_lifter", label = "Wykładnik liftera HKT", value = 0),
+                                   numericInput("num_liczbaPasm", label = "Liczba pasm", value = 40),  
+                                   numericInput("num_szerokoscPasma", label = "Szerokość pasma", value = 1)  
                             )   
                          )
                      )
@@ -127,11 +127,11 @@ shinyUI(
             "Dokumentacja",
             div(
                 class = "outer",
-                h4("#Dopisać mądry tekst.#"),
+                h4("Prostota jest szczytem wyrafinowania."),
                 div(
                     class = "inner",
                     h4(strong("Dokumentacja programu")),
-                    HTML("<img src=\"dokumentacja.jpg\">")
+                    HTML("<table class=\"tg\">  <tr>    <th class=\"tg-9hbo\">Lp.</th>    <th class=\"tg-9hbo\">Opis zadania</th>    <th class=\"tg-9hbo\">Spis wej\u015B\u0107, wyj\u015B\u0107 U\u017Cyte biblioteki</th>    <th class=\"tg-9hbo\">Stopie\u0144 trudno\u015Bci zadania</th>    <th class=\"tg-9hbo\">Problemy podczas wykonywania zadania</th>    <th class=\"tg-9hbo\">Jako\u015B\u0107 dokumentacji dostarczonej od grupy \u201EResearch\u201D</th>  </tr>  <tr>    <td class=\"tg-yw4l\">1</td>    <td class=\"tg-9hbo\">Segmentacja</td>    <td class=\"tg-yw4l\" rowspan=\"2\">Wej\u015Bcia:  parametry: len, overlap numofMFCC, dolna_czest, gorna_czest, wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja, dodanieOffsetu, liczbaPasm, szerokoscPasm U\u017Cyte biblioteki: tuneR</td>    <td class=\"tg-yw4l\" rowspan=\"2\">Zadania okaza\u0142y si\u0119 \u0142atwe w realizacji.</td>    <td class=\"tg-yw4l\" rowspan=\"2\">Research znalaz\u0142 gotow\u0105 funkcj\u0119 realizuj\u0105c\u0105 filtracj\u0119, segmentacj\u0119,i ekstrakcj\u0119 cech (melfcc), co umo\u017Cliwi\u0142o zaoszcz\u0119dzenie czasu i mo\u017Cliwo\u015B\u0107 skupienia si\u0119 na nast\u0119pnych zadaniach,w projekcie.</td>    <td class=\"tg-yw4l\" rowspan=\"2\">Materia\u0142y zgromadzone przez Research okaza\u0142y si\u0119 bardzo dobre, wyszukane,funkcje umo\u017Cliwi\u0142y znaczne zaoszcz\u0119dzenie czasu na tych zadaniach. Dzi\u0119ki temu pierwotne oszacowanie czasu wymaganego na zaimplementowanie tych zada\u0144 okaza\u0142o si\u0119 zawy\u017Cone.</td>  </tr>  <tr>    <td class=\"tg-yw4l\">2</td>    <td class=\"tg-9hbo\">Ekstrakcja cech</td>  </tr>  <tr>    <td class=\"tg-yw4l\">3</td>    <td class=\"tg-9hbo\">Redukcja wymiarowo\u015Bci</td>    <td class=\"tg-yw4l\">Wej\u015Bcia: tablica z parametrami,Wyj\u015Bcia: zredukowana tablica z parametrami U\u017Cyte biblioteki: tuneR</td>    <td class=\"tg-yw4l\">\u0141atwe zadanie.</td>    <td class=\"tg-yw4l\">Z otrzymanej tablicy z parametrami cech MFCC nale\u017Ca\u0142o wybra\u0107 odpowiednie parametry, kt\u00F3re najbardziej odzwierciedla\u0142y r\u00F3\u017Cnic\u0119 pomi\u0119dzy g\u0142osem m\u0119skim i \u017Ce\u0144skim oraz determinuj\u0105ce wiek m\u00F3wcy.</td>    <td class=\"tg-yw4l\" rowspan=\"2\">Grupa researchu wskaza\u0142a pamametry, kt\u00F3rych warto\u015B\u0107 najlepiej oddaje r\u00F3\u017Cnice pomi\u0119dzy g\u0142osem m\u0119skim i \u017Ce\u0144skim. Maj\u0105c n parametr\u00F3w z ekstrakcji cech wybieramy dwa z nich na podstawie korelacji mi\u0119dzy zwracanymi parametrami z funkcji melfcc.</td>  </tr>  <tr>    <td class=\"tg-yw4l\">4</td>    <td class=\"tg-9hbo\">Klasyfikacja pr\u00F3bek</td>    <td class=\"tg-yw4l\">Wej\u015Bcia: pliki Wyj\u015Bcia: wynik testu,(wiek i p\u0142e\u0107) U\u017Cyte biblioteki: tuneR</td>    <td class=\"tg-yw4l\">Zadanie okaza\u0142o si\u0119 \u0142atwe.</td>    <td class=\"tg-yw4l\">Zadaniem by\u0142o ustawienie progu, dla kt\u00F3rego pr\u00F3bka jest zakwalifikowana jako g\u0142os m\u0119ski (poni\u017Cej 0.5) lub \u017Ce\u0144ski (powy\u017Cej 0.5), oraz</td>  </tr>  <tr>    <td class=\"tg-yw4l\">5</td>    <td class=\"tg-9hbo\">Interfejs</td>    <td class=\"tg-yw4l\">Wej\u015Bcia: pliki Wyj\u015Bcia: wynik testu,(wiek i p\u0142e\u0107) U\u017Cyte biblioteki: tuneR</td>    <td class=\"tg-yw4l\">Najtrudniejsze zadanie w ca\u0142ym projekcie.</td>    <td class=\"tg-yw4l\">Programi\u015Bci odpowiedzialni za realizacj\u0119 tego zadania musieli z\u0142o\u017Cy\u0107 w ca\u0142o\u015B\u0107 zadania 1 \u2013 4. Problemem podczas realizacji tego zadania by\u0142a skuteczno\u015B\u0107 wykrywania p\u0142ci i b\u0142\u0119dy w szacowaniu wieku m\u00F3wcy. D\u0105\u017Cyli\u015Bmy do uzyskania jak najwi\u0119kszej skuteczno\u015Bci wykrywania p\u0142ci i minimalizacji b\u0142\u0119du wykrywania wieku.,Skuteczno\u015B\u0107 detekcji p\u0142ci: ok 85 % B\u0142\u0105d detekcji wieku: ok 11 lat</td>    <td class=\"tg-yw4l\">Grupa Researchu dostarczy\u0142a informacje,o,kolejnych wymaganych krokach przy implementacji algorytmu MFCC.</td>  </tr>  <tr>    <td class=\"tg-yw4l\">6</td>    <td class=\"tg-9hbo\">GUI</td>    <td class=\"tg-yw4l\">Prezentujemy: wiek, p\u0142e\u0107 oraz prawdopodobie\u0144stwo uzyskania poprawnego wyniku U\u017Cyte biblioteki: Shiny</td>    <td class=\"tg-yw4l\">Zadanie musia\u0142o zosta\u0107 wykonane jako ostatnie, by\u0142o bardzo czasoch\u0142onne.</td>    <td class=\"tg-yw4l\">Szablon GUI zosta\u0142 zrobiony na samym pocz\u0105tku pracy nad projektem, lecz wersja ko\u0144cowa wymaga\u0142a uko\u0144czonego algorytmu MFCC. Zatem programi\u015Bci odpowiedzialni za GUI mieli kr\u00F3tki zapas czasowy i musieli czeka\u0107 na zako\u0144czenie prac nad algorytmem.</td>    <td class=\"tg-yw4l\">Do tworzenia GUI nie by\u0142a wymagana dokumentacja od grupy Researchu, wykorzystali\u015Bmy kurs dost\u0119pny na stronie Shiny: http://shiny.rstudio.com/tutorial/</td>  </tr></table>")
                 )
             ),
             br()

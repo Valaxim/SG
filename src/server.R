@@ -7,22 +7,6 @@ source("test_all.R")
 
 shinyServer(function(input, output) {
     
-    # wypisanie próbnego tekstu 
-#     output$gender_output <- renderText({ 
-#         "Pole: płeć osoby"
-#     })
-#     output$gender_probability_output <- renderText({ 
-#         "Pole: prawdopodobieństwo wyznaczenia płci"
-#     })
-#     output$age_output <- renderText({ 
-#         "Pole: wiek osoby"
-#     })
-#     output$age_probability_output <- renderText({ 
-#         "Pole: prawdobodobieństwo wyznaczenia płci"
-#     })
-#     output$debug_text <- renderText({ 
-#         "Uruchom analizę głosu znanych osób. Próbki te pozwalają przeprowadzić analize poprawności algorytmów."
-#     })
     # Hejke-Gójka
     observe({
         if (input$action_example_1 > 0) {

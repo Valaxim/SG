@@ -47,10 +47,10 @@ test_all<- function(options){
                options$liczbaPasm, 
                options$szerokoscPasm)
 	name <- "Testowanie wszystkiego"
-	age <- paste("Łącznie testów: ", r$testy)
-	age_probal <- paste("Łącznie płeć poprawna: ", r$plec_poprawnie)
+	gender_probal <- paste("Liczba wykonanych testów: ", r$testy)
+	age_probal <- paste("Poprawna detekcja płci [%]: ", round(r$plec_poprawnie / r$testy * 100, 2))
 	gender <- "Podsumumowanie testów"
-	gender_probal <- paste("Wiek błąd sredni ", r$sredni_blad_wiek)
+	age <- paste("Średni błąd detekcji wieku: ", round(r$sredni_blad_wiek, 2))
 	path_to_file <- ""
 
 	result = list("name" = name, "age" = age, "age_probal" = age_probal, "gender" = gender, "gender_probal" = gender_probal, "path" = path_to_file)
