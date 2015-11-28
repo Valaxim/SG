@@ -18,8 +18,6 @@ szukaj_plec <- function(filename, db = initDb(),
   dane <- db$dane
   punkty <- db$punkty
   wiek <- db$wiek
-  wiek_kobiet <- db$wiekK
-  wiem_mezczyzn <- db$wiekM
   plec <- db$plec
   parameters = wave2mfcc(filename, len, overlap, numofMFCC, dolna_czest, gorna_czest,
                          wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja,
@@ -27,20 +25,19 @@ szukaj_plec <- function(filename, db = initDb(),
   pc = prcomp(x = rbind(parameters, dane), center=TRUE,scale=FALSE)
   punkt = pc$x[1, 1:2]
   num = length(plec)
-  odleglosci<- rep(0,num);
+  odleglosci<- rep(Inf,num);
   wynik_plec <- odleglosci;
   wynik_plec2 <- odleglosci;
   wynik_wiek <- odleglosci;
-  for(i in 1:num){
-    odleglosci[i] <- 1/(sqrt(((punkt-punkty[i])^2)));
-  }
-  pl <- sum(plec*odleglosci)/sum(odleglosci)
-  if(pl>=0.5) {
+  
+  for(i in 1:num)
+    odleglosci[i] <- 1/((punkt-punkty[i])^2);
+  
+  if(sum(plec*odleglosci)/sum(odleglosci)>=0.5)
     wynik_plec <- "mezczyzna"
-  }
-  else{
+  else
     wynik_plec <- "kobieta"
-  }
+  
   wynik_wiek <- sum(wiek*odleglosci)/sum(odleglosci);
   
   return(list("plec" = wynik_plec, "wiek" = wynik_wiek))

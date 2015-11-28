@@ -1,4 +1,5 @@
 source("szukaj_plec.R")
+source("initDb.R")
 
 test1 <- function(db = initDb(), len = 0.02,
                   overlap = 0.05, # Odstep miedzy kolejnymi oknami w sekundach

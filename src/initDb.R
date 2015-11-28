@@ -233,15 +233,11 @@ m_13 <- colMeans(par_117)
 dane1 <- rbind(m_22, m_45_1, m_63, m_32, m_35_2, m_34, m_25, m_35_3, m_24_2, m_39, m_28, m_25_1, m_22_2, m_33, m_41, m_32_1, m_35_4, m_43_1, m_44_2, m_35_1, m_25_2, m_38_1, m_44, m_45, m_35, m_6, m_53, m_29, m_43, m_58, m_38_2, m_33_1, m_61, m_54_1, m_54, m_44_1, m_61_1, m_36_2, m_47, m_13)
 plec1 <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
 wiek1 <- c(22,45,63,32,35,34,25,35,24,39,28,25,22,33,41,32,35,43,44,35,25,38,44,45,35,6,53,29,43,58,38,33,61,54,54,44,61,36,47,13)
-#dane <- rbind(dane0, dane1)
-#plec <- c(plec0, plec1)
-#wiek <- c(wiek0, wiek1)
 dane <- rbind(dane0, dane1)
-plec <- rbind(plec0, plec1)
-wiek <- rbind(wiek0, wiek1)
+plec <- c(plec0, plec1)
+wiek <- c(wiek0, wiek1)
 
 pc <- prcomp(x=dane,center=TRUE,scale=FALSE)
 punkty <- pc$x[,1:2]
-#load("baza.RData")
 return(list("dane" = dane, "punkty" = punkty, "plec" = plec, "wiek" = wiek, "wiekK" = wiek0, "wiekM" = wiek1))
 }
