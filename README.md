@@ -8,8 +8,5 @@ Struktura projektu za
 - https://nicercode.github.io/blog/2013-05-17-organising-my-project/  
 
 TODO:  
-- [GUI] dogadać ustawienia i dodać widgety do wprowadzenia ustawień
-- [GUI] napisać funkcję uruchamiającą testy i podpiąć ją pod button
-- [GUI] poprawa koloru linków w opisie teoretycznym
 - [GUI] odtwrzanie dźwięku po jego wczytaniu
 - [GUI] przerobienie obrazka dokumentacji na htmlową tabelkę
