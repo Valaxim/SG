@@ -1,9 +1,6 @@
 source('wave2mfcc.R')
 
-#load('baza.RData')
-source("wave2mfcc.R")
-source("initDb.R")
-szukaj_plec <- function(filename, db, 
+szukaj_plec <- function(filename, db = initDb(), 
                         len = 0.02,
                         overlap = 0.05, # Odstep miedzy kolejnymi oknami w sekundach
                         numofMFCC = 25, #ilosc wspolczynnikow wyliczanych dla kazdego okna czasowego
@@ -38,10 +35,7 @@ szukaj_plec <- function(filename, db,
     odleglosci[i] <- 1/(((punkt-punkty[i])^2));
   }
   pl <- sum(plec*odleglosci)/sum(odleglosci)
-  if(pl > 1) {
-    wynik_plec <- "error"
-  }
-  else if(pl>=0.5) {
+  if(pl>=0.5) {
     wynik_plec <- "mezczyzna"
   }
   else{

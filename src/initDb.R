@@ -242,5 +242,6 @@ wiek <- rbind(wiek0, wiek1)
 
 pc <- prcomp(x=dane,center=TRUE,scale=FALSE)
 punkty <- pc$x[,1:2]
+#load("baza.RData")
 return(list("dane" = dane, "punkty" = punkty, "plec" = plec, "wiek" = wiek, "wiekK" = wiek0, "wiekM" = wiek1))
 }
