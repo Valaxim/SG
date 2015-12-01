@@ -8,4 +8,4 @@ Struktura projektu za
 - https://nicercode.github.io/blog/2013-05-17-organising-my-project/  
 
 TODO:  
-- [GUI] przerobienie obrazka dokumentacji na htmlową tabelkę
+- [GUI] odtwrzanie dźwięku po jego wczytaniu
