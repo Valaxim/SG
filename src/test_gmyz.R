@@ -1,4 +1,4 @@
-source("szukaj_plec.R")
+source("src/szukaj_plec.R")
  
 test_gmyz<- function(options){
     
@@ -16,7 +16,7 @@ test_gmyz<- function(options){
         liczbaPasm = options$liczbaPasm, 
         szerokoscPasm = options$szerokoscPasm 
     )
-    r <- szukaj_plec("../data/gmyz.wav", db,
+    r <- szukaj_plec("./data/gmyz.wav", db,
                      options$len,
                      options$overlap, 
                      options$numofMFCC, 

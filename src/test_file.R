@@ -1,4 +1,4 @@
-source("szukaj_plec.R")
+source("src/szukaj_plec.R")
 test_file<- function(file, options){
 
     db <- initDb(

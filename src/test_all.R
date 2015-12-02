@@ -1,5 +1,5 @@
-source("test1.R")
-source("initDb.R")
+source("src/test1.R")
+source("src/initDb.R")
 
 test_all<- function(options){
     

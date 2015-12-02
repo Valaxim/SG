@@ -1,5 +1,5 @@
-source("szukaj_plec.R")
-source("initDb.R")
+source("src/szukaj_plec.R")
+source("src/initDb.R")
 
 test1 <- function(db = initDb(), len = 0.02,
                   overlap = 0.05, # Odstep miedzy kolejnymi oknami w sekundach
@@ -14,7 +14,7 @@ test1 <- function(db = initDb(), len = 0.02,
                   liczbaPasm = 40, #liczba pasm
                   szerokoscPasm = 1, #szerokosc pasm
                   verbose = FALSE) {
-  files = list.files(path = "../baza", pattern = "*.wav")
+  files = list.files(path = "./baza", pattern = "*.wav")
   
   lacznie_plec_poprawna <- 0
   wiek_blad <- 0
@@ -31,7 +31,7 @@ test1 <- function(db = initDb(), len = 0.02,
       wiek_poprawny <- strtoi(substr(f, 3, 3))
     else
       wiek_poprawny <- strtoi(substr(f, 3, 4))
-    wynik <- try(szukaj_plec(paste("../baza", f, sep = "/"), db,
+    wynik <- try(szukaj_plec(paste("./baza", f, sep = "/"), db,
                              len, overlap, numofMFCC, dolna_czest, gorna_czest,
                              wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja,
                              dodanieOffsetu, liczbaPasm, szerokoscPasm), silent = TRUE)

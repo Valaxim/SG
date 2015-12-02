@@ -1,9 +1,9 @@
 library(shiny)
-source("test_gmyz.R")
-source("test_szumi.R")
-source("test_hejke.R")
-source("test_file.R")
-source("test_all.R")
+source("src/test_gmyz.R")
+source("src/test_szumi.R")
+source("src/test_hejke.R")
+source("src/test_file.R")
+source("src/test_all.R")
 
 shinyServer(function(input, output) {
     

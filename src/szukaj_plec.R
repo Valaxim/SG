@@ -1,4 +1,4 @@
-source('wave2mfcc.R')
+source('src/wave2mfcc.R')
 
 szukaj_plec <- function(filename, db = initDb(), 
                         len = 0.02,

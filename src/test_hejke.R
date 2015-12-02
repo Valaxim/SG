@@ -1,4 +1,4 @@
-source("szukaj_plec.R")
+source("src/szukaj_plec.R")
 test_hejke<- function(options){
     # tutaj musi by?? wywo??anie funkcji dla Katarzyny Hejke-G??jki
     db <- initDb(
@@ -15,7 +15,7 @@ test_hejke<- function(options){
         options$liczbaPasm, 
         options$szerokoscPasm 
     )
-    r <- szukaj_plec("../data/heyke.wav", db,
+    r <- szukaj_plec("./data/heyke.wav", db,
                      options$len,
                      options$overlap, 
                      options$numofMFCC, 

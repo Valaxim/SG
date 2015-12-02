@@ -1,4 +1,4 @@
-source("szukaj_plec.R")
+source("src/szukaj_plec.R")
 
 test_szumi<- function(options){
     db <- initDb(
@@ -15,7 +15,7 @@ test_szumi<- function(options){
         liczbaPasm = options$liczbaPasm, 
         szerokoscPasm = options$szerokoscPasm 
     )
-    r <- szukaj_plec("../data/szumi.wav", db,
+    r <- szukaj_plec("./data/szumi.wav", db,
                      options$len,
                      options$overlap, 
                      options$numofMFCC, 

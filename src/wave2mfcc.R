@@ -1,4 +1,4 @@
-source("fintracja.R")
+source("src/fintracja.R")
 
 wave2mfcc <- function(
   nazwa_pliku,
