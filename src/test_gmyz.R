@@ -33,7 +33,7 @@ test_gmyz<- function(options){
     age <- r$wiek
     gender <- r$plec
   
-	name <- "Cezary Gmyz"
+	name <- "Agnieszka Radwańska"
 	age_probal <- ""
 	gender_probal <- r$plec_probal
 	path_to_file <- "ścieżka do pliku"
