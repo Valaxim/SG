@@ -25,7 +25,7 @@ shinyServer(function(input, output) {
             print("asdasdas")
             r <- suppressWarnings(test_hejke(alg_options))
             name <- r$name
-            age <- r$age
+            age <- paste(round(r$age), "lat", " ")
             age_probal <- r$age_probal
             gender <- r$gender
             gender_probal <- r$gender_probal
@@ -67,7 +67,7 @@ shinyServer(function(input, output) {
                                 "szerokoscPasm" = input$num_szerokoscPasma)
             r <- suppressWarnings(test_gmyz(alg_options))
             name <- r$name
-            age <- r$age
+            age <- paste(round(r$age), "lat", " ")
             age_probal <- r$age_probal
             gender <- r$gender
             gender_probal <- r$gender_probal
@@ -110,7 +110,7 @@ shinyServer(function(input, output) {
             
             r <- suppressWarnings(test_szumi(alg_options))
             name <- r$name
-            age <- r$age
+            age <- paste(round(r$age), "lat", " ")
             age_probal <- r$age_probal
             gender <- r$gender
             gender_probal <- r$gender_probal
@@ -195,7 +195,7 @@ shinyServer(function(input, output) {
                                 "szerokoscPasm" = input$num_szerokoscPasma)
             r <- suppressWarnings(test_file(input$inputFile, alg_options))
             name <- r$name
-            age <- r$age
+            age <- paste(round(r$age), "lat", " ")
             age_probal <- r$age_probal
             gender <- r$gender
             gender_probal <- r$gender_probal

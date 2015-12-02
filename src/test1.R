@@ -14,7 +14,7 @@ test1 <- function(db = initDb(), len = 0.02,
                   liczbaPasm = 40, #liczba pasm
                   szerokoscPasm = 1, #szerokosc pasm
                   verbose = FALSE) {
-  files = list.files(path = "./baza", pattern = "*.wav")
+  files = list.files(path = "./baza2", pattern = "*.wav")
   
   lacznie_plec_poprawna <- 0
   wiek_blad <- 0
@@ -23,7 +23,7 @@ test1 <- function(db = initDb(), len = 0.02,
     if (verbose)
       cat(f, "\n")
   
-    if (f[1] == "k")
+    if (substr(f, 1, 1) == "k")
       plec_poprawna <- "kobieta"
     else
       plec_poprawna <- "mezczyzna"
@@ -31,7 +31,7 @@ test1 <- function(db = initDb(), len = 0.02,
       wiek_poprawny <- strtoi(substr(f, 3, 3))
     else
       wiek_poprawny <- strtoi(substr(f, 3, 4))
-    wynik <- try(szukaj_plec(paste("./baza", f, sep = "/"), db,
+    wynik <- try(szukaj_plec(paste("./baza2", f, sep = "/"), db,
                              len, overlap, numofMFCC, dolna_czest, gorna_czest,
                              wykladnik_liftera, hkt, czyPowerSpectrum, wstepna_filtracja,
                              dodanieOffsetu, liczbaPasm, szerokoscPasm), silent = TRUE)

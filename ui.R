@@ -109,7 +109,7 @@ shinyUI(
                                     sliderInput("len_slider", label = "Długość okien", min = 0, max = 0.10, value = 0.02),
                                     sliderInput("overlap_slider", label = "Overlapping okien", min = 0, max = 0.10, value = 0.05),
                                     sliderInput("filtr_slider", label = "Współczynnik wstępnej filtracji", min = 0, max = 1, value = 0.97),
-                                    sliderInput("freq_slider", label = "Dolna i górna częstotliwość filtracji", min = 0, max = 10000, value = c(100, 5000))
+                                    sliderInput("freq_slider", label = "Dolna i górna częstotliwość filtracji", min = 0, max = 10000, value = c(0, 8000))
                                     
                             ),
                             column(4, 
