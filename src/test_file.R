@@ -33,7 +33,7 @@ test_file<- function(file, options){
     gender <- r$plec
 	name <- file$name
 	age_probal <- ""
-	gender_probal <- ""
+	gender_probal <- r$plec_probal
 	path_to_file <- file$datapath
 
 	result <- list("name" = name, "age" = age, "age_probal" = age_probal, "gender" = gender, "gender_probal" = gender_probal, "path" = path_to_file)

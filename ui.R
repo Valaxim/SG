@@ -17,7 +17,7 @@ shinyUI(
                     div(
                         style = "text-align: center;",
                         actionButton("action_example_1", label = "Katarzyna Hejke-Gójka", width='20%'),    
-                        actionButton("action_example_2", label = "Cezary Gmyz", width='20%'),
+                        actionButton("action_example_2", label = "Agieszka Radwańska", width='20%'),
                         actionButton("action_example_3", label = "Piotr Szumlewicz", width='20%'),
                         actionButton("action_tests", label = "Uruchom testy", width='20%'),
                         textOutput("debug_text"),

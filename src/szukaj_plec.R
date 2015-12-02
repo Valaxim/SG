@@ -40,5 +40,11 @@ szukaj_plec <- function(filename, db = initDb(),
   
   wynik_wiek <- sum(wiek*odleglosci)/sum(odleglosci);
   
-  return(list("plec" = wynik_plec, "wiek" = wynik_wiek))
+  if (wynik_plec == "mezczyzna") 
+    plec_probal <- sum(plec*odleglosci)/sum(odleglosci) * 100
+  else
+    plec_probal <- (1 - sum(plec*odleglosci)/sum(odleglosci)) * 100
+  plec_probal = paste(round(plec_probal, 2), "%", "")
+  
+  return(list("plec" = wynik_plec, "wiek" = wynik_wiek, "plec_probal" = plec_probal))
 }

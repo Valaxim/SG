@@ -31,8 +31,8 @@ test_hejke<- function(options){
     age <- r$wiek
     gender <- r$plec
     name <- "Katarzyna Hejke Gójka"
-    age_probal <- "0.5"
-    gender_probal <- "0.8"
+    age_probal <- ""
+    gender_probal <- r$plec_probal
     path_to_file <- "Ścieżka do pliku"
     
     result = list("name" = name, "age" = age, "age_probal" = age_probal, "gender" = gender, "gender_probal" = gender_probal, "path" = path_to_file)

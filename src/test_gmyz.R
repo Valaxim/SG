@@ -16,7 +16,7 @@ test_gmyz<- function(options){
         liczbaPasm = options$liczbaPasm, 
         szerokoscPasm = options$szerokoscPasm 
     )
-    r <- szukaj_plec("./data/gmyz.wav", db,
+    r <- szukaj_plec("./data/radwanska.wav", db,
                      options$len,
                      options$overlap, 
                      options$numofMFCC, 
@@ -34,8 +34,8 @@ test_gmyz<- function(options){
     gender <- r$plec
   
 	name <- "Cezary Gmyz"
-	age_probal <- "0.8"
-	gender_probal <- "0.99"
+	age_probal <- ""
+	gender_probal <- r$plec_probal
 	path_to_file <- "ścieżka do pliku"
 
 	result = list("name" = name, "age" = age, "age_probal" = age_probal, "gender" = gender, "gender_probal" = gender_probal, "path" = path_to_file)
